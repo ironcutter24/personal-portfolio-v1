@@ -12,19 +12,27 @@ body {
 }
 
 main {
-    width: 60%;
+    width: 70%;
     /* background-color: grey; */
 }
 
 #bio {
     width: 60%;
     color: white;
+    font-size: 18px;
+    line-height: 24px;
 
     float: left;
 }
 
 p.pixel {
     font-family: "pixelmix";
+}
+
+p.section {
+    font-size: 13px;
+    line-height: 18px;
+    color: white;
 }
 
 img.pixel {
@@ -36,7 +44,15 @@ img.pixel {
 }
 
 div.container {
-    margin-top: 60px;
+    /* background-color: lime; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    width: 100%;
+    min-height: 50px;
+
+    overflow: auto;
+    display: block;
 }
 
 .avatarGroup {
@@ -68,7 +84,24 @@ div.container {
 }
 
 .buttonGroup {
+    margin-top: 6px;
     display: flex;
     justify-content: center;
     /* background-color: white; */
+}
+
+.sectionBlock {
+    width: 12%;
+    float: left;
+
+    text-align: right;
+    
+    /* background-color: red; */
+}
+
+.contentBlock {
+    width: 85%;
+    float: right;
+
+    /* background-color: blueviolet; */
 }
