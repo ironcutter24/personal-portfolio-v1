@@ -12,8 +12,8 @@ body {
 }
 
 main {
-    width: 70%;
-    /* background-color: grey; */
+    width: 60%;
+    position: relative;
 }
 
 #bio {
@@ -25,26 +25,27 @@ main {
     float: left;
 }
 
-p.pixel {
-    font-family: "pixelmix";
-}
-
 p.section {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 18px;
     color: white;
 }
 
+p.pixel {
+    font-family: "pixelmix";
+}
+
 img.pixel {
-    height: 80px;
-    width: 80px;
+    height: 100px;
+    width: 100px;
+
+    margin-right: -16px;
 
     background-color: transparent;
-    image-rendering: pixelated;
+    image-rendering: auto;
 }
 
 div.container {
-    /* background-color: lime; */
     margin-top: 10px;
     margin-bottom: 10px;
 
@@ -70,7 +71,6 @@ div.container {
 }
 
 .iconButton {
-    /* background-color: lime; */
     border: none;
     padding: 6px 6px;
 
@@ -87,21 +87,16 @@ div.container {
     margin-top: 6px;
     display: flex;
     justify-content: center;
-    /* background-color: white; */
 }
 
 .sectionBlock {
-    width: 12%;
-    float: left;
+    width: 200px;
+    position: absolute;
+    right: 104%;
 
     text-align: right;
-    
-    /* background-color: red; */
 }
 
 .contentBlock {
-    width: 85%;
-    float: right;
-
-    /* background-color: blueviolet; */
+    width: 100%;
 }
