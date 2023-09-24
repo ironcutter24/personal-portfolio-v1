@@ -4,6 +4,11 @@
 }
 
 body {
+    background-image: url("images/Vector_Seamless_Game_Controller_Pattern_Abstract_Background-02.jpg");
+    background-repeat: repeat;
+    background-size: 25%;
+    background-blend-mode: color-burn;
+    
     background-color: rgb(91, 68, 92);
 
     width: 100%;
@@ -12,8 +17,14 @@ body {
 }
 
 main {
-    width: 60%;
     position: relative;
+    
+    width: 66%;
+    margin: 0;
+    padding: 20px;
+    border-radius: 20px;
+
+    background-color: rgb(91, 68, 92);
 }
 
 #bio {
@@ -22,6 +33,10 @@ main {
     font-size: 18px;
     line-height: 24px;
 
+    position: relative;
+    top: 24px;
+    left: 48px;
+    
     float: left;
 }
 
@@ -57,7 +72,10 @@ div.container {
 }
 
 .avatarGroup {
-    width: 200px;
+    position: relative;
+    right: 48px;
+
+    width: 220px;
 
     float: right;
 }
@@ -68,6 +86,29 @@ div.container {
     border-radius: 100px;
 
     display: block;
+}
+
+.avatarOverlay {
+    height: 240px;
+    width: 240px;
+
+    display: block;
+
+    position: absolute;
+    top: -20px;
+    left: -22px;
+
+    overflow: visible;
+    z-index: 2;
+}
+
+.avatarBG {
+    width: 33%;
+    height: auto;
+
+    margin: 0;
+
+    opacity: 0.2;
 }
 
 .iconButton {
