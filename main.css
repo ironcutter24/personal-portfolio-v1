@@ -22,7 +22,7 @@ main {
     padding: 20px;
     border-radius: 20px;
 
-    background-color: rgb(91, 68, 92);
+    background-color: rgb(12, 12, 12)
 }
 
 #bio {
@@ -62,12 +62,12 @@ div.container {
     position: relative;
 
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
 
     width: 100%;
-    min-height: 50px;
+    min-height: 120px;
 
-    overflow: auto;
+    overflow: hidden;
     display: block;
 }
 
@@ -122,6 +122,8 @@ div.container {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+
+    filter: hue-rotate();
 }
 
 .buttonGroup {
@@ -140,7 +142,18 @@ div.container {
 }
 
 .contentBlock {
-    width: 88%;
-    color: white;
+    width: 84%;
+    color: rgb(204, 204, 204);
     float: right;
+
+    font-family: Times, serif;
+    font-size: 20px;
+
+    text-align: justify;
+    text-justify: inter-word;
+
+    padding-right: 48px;
+
+    position: relative;
+    top: 24px;
 }
