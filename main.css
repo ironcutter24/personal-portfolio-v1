@@ -17,8 +17,6 @@ body {
 }
 
 main {
-    position: relative;
-    
     width: 66%;
     margin: 0;
     padding: 20px;
@@ -34,8 +32,8 @@ main {
     line-height: 24px;
 
     position: relative;
-    top: 24px;
-    left: 48px;
+    top: 12px;
+    left: 114px;
     
     float: left;
 }
@@ -61,6 +59,8 @@ img.pixel {
 }
 
 div.container {
+    position: relative;
+
     margin-top: 10px;
     margin-bottom: 10px;
 
@@ -90,13 +90,13 @@ div.container {
 
 .avatarOverlay {
     height: 240px;
-    width: 240px;
+    width: 234px;
 
     display: block;
 
     position: absolute;
-    top: -20px;
-    left: -22px;
+    top: -18px;
+    left: -18px;
 
     overflow: visible;
     z-index: 2;
@@ -131,14 +131,16 @@ div.container {
 }
 
 .sectionBlock {
-    width: 200px;
+    width: 140px;
+
     position: absolute;
-    right: 104%;
+    left: -30px;
 
     text-align: right;
 }
 
 .contentBlock {
-    width: 100%;
+    width: 88%;
     color: white;
+    float: right;
 }
