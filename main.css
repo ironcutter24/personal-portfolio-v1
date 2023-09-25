@@ -14,6 +14,11 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
+
+    font-family: Times, serif;
+    font-size: 18px;
+    line-height: 24px;
+    color: rgb(204, 204, 204);
 }
 
 main {
@@ -25,16 +30,25 @@ main {
     background-color: rgb(12, 12, 12)
 }
 
-#bio {
-    width: 60%;
-    color: white;
-    font-size: 18px;
-    line-height: 24px;
-
+div.container {
     position: relative;
-    top: 12px;
-    left: 114px;
+
+    margin-top: 10px;
+    margin-bottom: 40px;
+
+    width: 100%;
+    min-height: 120px;
+
+    overflow: hidden;
+    display: block;
+}
+
+#bio {
+    width: 400px;
     
+    margin-top: -32px;
+    margin-left: 8px;
+
     float: left;
 }
 
@@ -58,26 +72,9 @@ img.pixel {
     image-rendering: auto;
 }
 
-div.container {
-    position: relative;
-
-    margin-top: 10px;
-    margin-bottom: 40px;
-
-    width: 100%;
-    min-height: 120px;
-
-    overflow: hidden;
-    display: block;
-}
-
 .avatarGroup {
-    position: relative;
-    right: 48px;
-
     width: 220px;
-
-    float: right;
+    float: left;
 }
 
 .avatar {
@@ -92,8 +89,6 @@ div.container {
     height: 240px;
     width: 234px;
 
-    display: block;
-
     position: absolute;
     top: -18px;
     left: -18px;
@@ -102,21 +97,13 @@ div.container {
     z-index: 2;
 }
 
-.avatarBG {
-    width: 33%;
-    height: auto;
-
-    margin: 0;
-
-    opacity: 0.2;
-}
-
 .iconButton {
     border: none;
     padding: 6px 6px;
+    margin-top: 6px;
 
-    height: 40px;
-    width: 40px;
+    height: 32px;
+    width: 32px;
 
     text-align: center;
     text-decoration: none;
@@ -143,11 +130,7 @@ div.container {
 
 .contentBlock {
     width: 84%;
-    color: rgb(204, 204, 204);
     float: right;
-
-    font-family: Times, serif;
-    font-size: 20px;
 
     text-align: justify;
     text-justify: inter-word;
