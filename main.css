@@ -8,6 +8,7 @@ body {
     background-repeat: repeat;
     background-size: 25%;
     background-blend-mode: color-burn;
+    background-size: 1200px;
     
     background-color: rgb(91, 68, 92);
 
@@ -50,6 +51,17 @@ div.container {
     margin-left: 8px;
 
     float: left;
+}
+
+#header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 60px;
+
+    background-color: rgb(8, 8, 8);
 }
 
 p.section {
@@ -139,4 +151,30 @@ img.pixel {
 
     position: relative;
     top: 24px;
+}
+
+.cardContainer {
+    position: relative;
+
+    overflow: hidden;
+
+    height: 280px;
+    width: 400px;
+}
+
+.cardImage {
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+}
+
+.cardTitle {
+    position: absolute;
+    bottom: 0;
+
+    height: 40px;
+    width: 100%;
+    
+    text-align: right;
+    background-color: white;
 }
