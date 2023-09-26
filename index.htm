@@ -95,7 +95,7 @@
         </div>
 
         <div class="container">
-            <section-block title="Projects .03" src="images/luna_run.gif"></section-block>
+            <section-block id="projects" title="Projects .03" src="images/luna_run.gif"></section-block>
             <div class="contentBlock">
 
                 <project-card title="Proj name" src="T8pin8.png"></project-card>
@@ -104,20 +104,9 @@
         </div>
 
         <div class="container">
-            <section-block title="Game Jams .04" src="images/luna_guitar.gif"></section-block>
+            <section-block id="contacts" title="Contacts .04" src="images/luna_guitar.gif"></section-block>
             <div class="contentBlock">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
-                </p>
+
             </div>
         </div>
 
@@ -144,21 +133,19 @@
 
 
     class SectionBlock extends HTMLElement {
-
         connectedCallback() {
             this.innerHTML = `
-        <div class="sectionBlock">
-            <p class="pixel section">${this.getAttribute('title') || undefined}</p>
-            <img class="pixel" src="${this.getAttribute('src') || undefined}">
-        </div>
-    `;
+                <div class="sectionBlock">
+                    <p class="pixel section">${this.getAttribute('title') || undefined}</p>
+                    <img class="pixel" src="${this.getAttribute('src') || undefined}">
+                </div>
+            `;
         }
     }
     customElements.define("section-block", SectionBlock);
 
 
     class ProjectCard extends HTMLElement {
-
         connectedCallback() {
             this.innerHTML = `
                 <div class="cardContainer">
@@ -169,6 +156,22 @@
         }
     }
     customElements.define("project-card", ProjectCard);
+
+
+    // Animations
+    const cards = document.querySelectorAll('.cardTitle');
+
+    cards.forEach(card => {
+        card.addEventListener('mouseover', function handleHover(event) {
+            card.setAttribute('style', 'background-color: yellow;');
+        });
+    });
+
+    cards.forEach(card => {
+        card.addEventListener('mouseout', function handleHover(event) {
+            card.setAttribute('style', 'background-color: white;');
+        });
+    });
 
 </script>
 
