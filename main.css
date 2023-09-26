@@ -22,6 +22,10 @@ body {
     color: rgb(204, 204, 204);
 }
 
+a {
+    color: white;
+}
+
 main {
     width: 66%;
     margin: 0;
@@ -66,6 +70,12 @@ div.container {
     z-index: 10;
 }
 
+.headerElement {
+    margin-left: 20px;
+    font-size: 14px;
+    font-family: "pixel_rpg";
+}
+
 p.section {
     font-size: 14px;
     line-height: 18px;
@@ -77,8 +87,8 @@ p.pixel {
 }
 
 img.pixel {
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
 
     margin-right: -16px;
 
@@ -87,6 +97,7 @@ img.pixel {
 }
 
 .avatarGroup {
+    position: relative;
     width: 220px;
     float: left;
 }
@@ -176,7 +187,16 @@ img.pixel {
 
     height: 40px;
     width: 100%;
+
+    opacity: 0;
     
     text-align: right;
-    background-color: white;
 }
+
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }

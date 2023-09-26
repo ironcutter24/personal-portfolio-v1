@@ -116,10 +116,10 @@
         connectedCallback() {
             this.innerHTML = `
                 <div id="header">
-                    <div style="float: right">
-                        <a href="#bio">Bio</a>
-                        <a href="#projects">Projects</a> 
-                        <a href="#contacts">Contacts</a>
+                    <div class="vertical-center" style="right: 120px;">
+                        <a href="#top" class="headerElement">About Me</a>
+                        <a href="#projects" class="headerElement">Projects</a> 
+                        <a href="#contacts" class="headerElement">Contacts</a>
                     </div>
                 </div>
             `;
@@ -147,7 +147,8 @@
 
             this.innerHTML = `
                 <div class="cardContainer">
-                    <p class="cardTitle"><a href="">${title}</a></p>
+                    <p class="cardTitle band" style="background-color: black"></p>
+                    <p class="cardTitle title" style="z-index: 1"><a href="">${title}</a></p>
                     <img class="cardImage" src="${this.getAttribute('src') || undefined}" alt="${title}">
                 </div>
             `;
@@ -159,38 +160,37 @@
     /***** ANIMATIONS *****/
     const cards = document.querySelectorAll('.cardContainer');
 
-    // Init opacity
-    cards.forEach(card => {
-        var titleBox = card.querySelector('.cardTitle');
-        titleBox.setAttribute('style', 'opacity: 0;');
-    });
-
     cards.forEach(card => {
         card.addEventListener('mouseover', function handleHover(event) {
-            var targetObject = card.querySelector('.cardTitle');
-            anime.remove(targetObject);
-            anime({
-                targets: targetObject,
-                opacity: 1,
-                duration: 800,
-                easing: 'linear',
-            });
+            var band = card.querySelector('.band');
+            fade(band, .4, 550);
+
+            var title = card.querySelector('.title');
+            fade(title, 1, 550);
         });
     });
 
     cards.forEach(card => {
         card.addEventListener('mouseout', function handleHover(event) {
-            var targetObject = card.querySelector('.cardTitle');
-            anime.remove(targetObject);
-            anime({
-                targets: targetObject,
-                opacity: 0,
-                duration: 200,
-                easing: 'linear',
-            });
+            var band = card.querySelector('.band');
+            fade(band, 0, 200);
+
+            var title = card.querySelector('.title');
+            fade(title, 0, 200);
         });
     });
 
+
+
+    function fade(obj, to, time) {
+        anime.remove(obj);
+        anime({
+            targets: obj,
+            opacity: to,
+            duration: time,
+            easing: 'linear',
+        });
+    }
 </script>
 
 </html>
