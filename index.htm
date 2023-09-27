@@ -147,8 +147,8 @@
 
             this.innerHTML = `
                 <div class="cardContainer">
-                    <p class="cardTitle band" style="background-color: black"></p>
-                    <p class="cardTitle title" style="z-index: 1"><a href="">${title}</a></p>
+                    <p class="cardTitle band" style="z-index: 1; background-color: black;"></p>
+                    <p class="cardTitle title" style="z-index: 2;"><a href="">${title}</a></p>
                     <img class="cardImage" src="${this.getAttribute('src') || undefined}" alt="${title}">
                 </div>
             `;
@@ -167,6 +167,9 @@
 
             var title = card.querySelector('.title');
             fade(title, 1, 550);
+
+            var image = card.querySelector('.cardImage');
+            scale(image, 1.05, 550, 'cubicBezier(.5, .05, .1, .3)');
         });
     });
 
@@ -177,18 +180,31 @@
 
             var title = card.querySelector('.title');
             fade(title, 0, 200);
+
+            var image = card.querySelector('.cardImage');
+            scale(image, 1, 200);
         });
     });
 
 
 
-    function fade(obj, to, time) {
+    function fade(obj, to, time, ease = 'linear') {
         anime.remove(obj);
         anime({
             targets: obj,
             opacity: to,
             duration: time,
-            easing: 'linear',
+            easing: ease,
+        });
+    }
+
+    function scale(obj, to, time, ease = 'linear') {
+        anime.remove(obj);
+        anime({
+            targets: obj,
+            scale: to,
+            duration: time,
+            easing: ease,
         });
     }
 </script>

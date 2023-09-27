@@ -171,14 +171,13 @@ img.pixel {
 
     overflow: hidden;
 
+    border-radius: 10px;
     height: 280px;
     width: 400px;
 }
 
 .cardImage {
-    border-radius: 10px;
     height: 100%;
-    width: 100%;
 }
 
 .cardTitle {
