@@ -2,18 +2,10 @@
 <html>
 
 <head>
-    <title>GameDev Portfolio</title>
+    <head-content></head-content>
 
-    <meta charset="UTF-8">
-    <meta name="keywords" content="portfolio, gamedev, game development, videogames">
-    <meta name="description" content="Personal portfolio">
-    <meta name="author" content="Damiano Tagliaferri">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="main.css">
-
-    <script src="libs/anime.min.js"></script>
+    <script src="libs/anime.min.js"></script>>
+    <script src="common.js"></script>
 </head>
 
 <body>
@@ -21,8 +13,6 @@
     </custom-header>
 
     <main>
-
-
         <div class="container" style="margin-top: 120px; margin-bottom: 40px; margin-left: 154px">
             <div class="avatarGroup">
                 <img class="avatar" src="images/avatar_cv_photo.JPG">
@@ -36,6 +26,7 @@
                             src="images/icons/itch.png"></a>
                 </div>
             </div>
+
             <div id="bio">
                 <p class="pixel" style="font-size: 36px; color: white;">
                     Hello world!
@@ -94,7 +85,10 @@
             <section-block id="projects" title="Projects .03" src="images/luna_run.gif"></section-block>
             <div class="contentBlock">
 
-                <project-card title="Proj name" src="T8pin8.png"></project-card>
+                <project-card title="Proj name" src="T8pin8.png" href="project.htm"></project-card>
+                <project-card title="Proj name" src="T8pin8.png" href="project.htm"></project-card>
+                <project-card title="Proj name" src="T8pin8.png" href="project.htm"></project-card>
+                <project-card title="Proj name" src="T8pin8.png" href="project.htm"></project-card>
 
             </div>
         </div>
@@ -111,23 +105,6 @@
 </body>
 
 <script>
-
-    class Header extends HTMLElement {
-        connectedCallback() {
-            this.innerHTML = `
-                <div id="header">
-                    <div class="vertical-center" style="right: 120px;">
-                        <a href="#top" class="headerElement">About Me</a>
-                        <a href="#projects" class="headerElement">Projects</a> 
-                        <a href="#contacts" class="headerElement">Contacts</a>
-                    </div>
-                </div>
-            `;
-        }
-    }
-    customElements.define("custom-header", Header);
-
-
     class SectionBlock extends HTMLElement {
         connectedCallback() {
             this.innerHTML = `
@@ -144,12 +121,14 @@
     class ProjectCard extends HTMLElement {
         connectedCallback() {
             var title = this.getAttribute('title') || undefined;
+            var href = this.getAttribute('href') || undefined;
+            var src = this.getAttribute('src') || undefined;
 
             this.innerHTML = `
                 <div class="cardContainer">
                     <p class="cardTitle band" style="z-index: 1; background-color: black;"></p>
-                    <p class="cardTitle title" style="z-index: 2;"><a href="">${title}</a></p>
-                    <img class="cardImage" src="${this.getAttribute('src') || undefined}" alt="${title}">
+                    <a class="cardTitle title " style="z-index: 2;" href="${href}">${title}</a>
+                    <a href="${href}"><img class="cardImage" src="${src}" alt="${title}"></a>
                 </div>
             `;
         }
