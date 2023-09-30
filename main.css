@@ -13,6 +13,7 @@ body {
     background-size: 25%;
     background-blend-mode: color-burn;
     background-size: 1200px;
+    background-attachment: fixed;
     
     background-color: rgb(91, 68, 92);
 
