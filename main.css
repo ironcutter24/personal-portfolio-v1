@@ -165,27 +165,52 @@ img.pixel {
     top: 24px;
 }
 
+
+.project {
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: 24px;
+    float: left;
+
+    height: 280px;
+}
+
 .cardContainer {
     position: relative;
-
     overflow: hidden;
 
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(204, 204, 204);
     border-radius: 10px;
-    height: 280px;
-    width: 400px;
+    
+    height: 260px;
+    width: 260px;
 }
 
 .cardImage {
     height: 100%;
 }
 
-.cardTitle {
+.cardBand {
     position: absolute;
-    bottom: 0;
+    bottom: -20px;
 
-    height: 40px;
+    height: 28px;
     width: 100%;
 
+    opacity: 0;
+}
+
+.cardTitle {
+    position: absolute;
+    left: -8px;
+    bottom: -12px;
+
+    width: 100%;
+    font-family: "pixel_rpg";
+    font-size: 14px;
+    color: white;
     opacity: 0;
     
     text-align: right;
@@ -197,4 +222,18 @@ img.pixel {
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-  }
+}
+
+.badge {
+    color: white;
+
+    margin: 4px;
+    padding: 2px 6px;
+    text-align: center;
+
+    font-family: sans-serif;
+    font-size: small;
+    font-weight: bold;
+
+    border-radius: 6px;
+}
