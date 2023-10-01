@@ -75,6 +75,8 @@ main {
 
 section {
     width: 100%;
+    margin-top: 60px;
+    margin-bottom: 30px;
     display: block;
 }
 
@@ -138,15 +140,6 @@ p.pixel {
     text-align: justify;
     text-justify: inter-word;
 
-    padding-right: 48px;
-
-    position: relative;
-    top: 24px;
-
-
-    margin-top: 10px;
-    margin-bottom: 40px;
-
     display: block;
 }
 
@@ -155,9 +148,6 @@ p.pixel {
     margin-right: 4px;
     margin-bottom: 24px;
     display: inline-block;
-    height: 280px;
-
-    background-color: green;
 }
 
 .cardContainer {
@@ -203,8 +193,6 @@ p.pixel {
 
 .badge {
     color: white;
-
-    margin: 4px;
     padding: 2px 6px;
     text-align: center;
 
