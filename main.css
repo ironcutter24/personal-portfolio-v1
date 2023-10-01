@@ -4,61 +4,7 @@
 }
 
 html {
-	scroll-behavior: smooth;
-}
-
-body {
-    background-image: url("img/Vector_Seamless_Game_Controller_Pattern_Abstract_Background-02.jpg");
-    background-repeat: repeat;
-    background-size: 25%;
-    background-blend-mode: color-burn;
-    background-size: 1200px;
-    background-attachment: fixed;
-    
-    background-color: rgb(91, 68, 92);
-
-    display: flex;
-    justify-content: center;
-
-    font-family: Times, serif;
-    font-size: 18px;
-    line-height: 24px;
-    color: rgb(204, 204, 204);
-}
-
-a {
-    color: white;
-}
-
-main {
-    width: 66%;
-    margin: 0;
-    padding: 20px;
-    border-radius: 20px;
-
-    background-color: rgb(12, 12, 12)
-}
-
-div.container {
-    position: relative;
-
-    margin-top: 10px;
-    margin-bottom: 40px;
-
-    width: 100%;
-    min-height: 120px;
-
-    overflow: hidden;
-    display: block;
-}
-
-#bio {
-    width: 400px;
-    
-    margin-top: -32px;
-    margin-left: 8px;
-
-    float: left;
+    scroll-behavior: smooth;
 }
 
 #header {
@@ -80,30 +26,68 @@ div.container {
     font-family: "pixel_rpg";
 }
 
-p.section {
-    font-size: 14px;
-    line-height: 18px;
+body {
+    background-image: url("img/Vector_Seamless_Game_Controller_Pattern_Abstract_Background-02.jpg");
+    background-repeat: repeat;
+    background-size: 25%;
+    background-blend-mode: color-burn;
+    background-size: 1200px;
+    background-attachment: fixed;
+
+    background-color: rgb(91, 68, 92);
+
+    display: flex;
+    justify-content: center;
+
+    font-family: Times, serif;
+    font-size: 18px;
+    line-height: 24px;
+    color: rgb(204, 204, 204);
+}
+
+h1,
+h2,
+h3,
+a {
     color: white;
+}
+
+h2 {
+    text-align: center;
+}
+
+main {
+    width: 820px;
+    margin: 0;
+    border-radius: 20px;
+
+    padding-left: 110px;
+    padding-right: 110px;
+
+    background-color: rgb(12, 12, 12)
+}
+
+#bio {
+    width: 400px;
+    margin-left: 4px;
+    display: inline-block;
+}
+
+section {
+    width: 100%;
+    display: block;
 }
 
 p.pixel {
     font-family: "pixel_rpg";
 }
 
-img.pixel {
-    height: 80px;
-    width: 80px;
-
-    margin-right: -16px;
-
-    background-color: transparent;
-    image-rendering: auto;
-}
-
 .avatarGroup {
     position: relative;
     width: 220px;
-    float: left;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 34px;
 }
 
 .avatar {
@@ -148,18 +132,8 @@ img.pixel {
     justify-content: center;
 }
 
-.sectionBlock {
-    width: 140px;
-
-    position: absolute;
-    left: -30px;
-
-    text-align: right;
-}
-
-.contentBlock {
-    width: 84%;
-    float: right;
+.content {
+    width: 100%;
 
     text-align: justify;
     text-justify: inter-word;
@@ -168,16 +142,22 @@ img.pixel {
 
     position: relative;
     top: 24px;
-}
 
+
+    margin-top: 10px;
+    margin-bottom: 40px;
+
+    display: block;
+}
 
 .project {
     margin-left: 4px;
     margin-right: 4px;
     margin-bottom: 24px;
-    float: left;
-
+    display: inline-block;
     height: 280px;
+
+    background-color: green;
 }
 
 .cardContainer {
@@ -188,7 +168,7 @@ img.pixel {
     border-width: 2px;
     border-color: rgb(204, 204, 204);
     border-radius: 10px;
-    
+
     height: 260px;
     width: 260px;
 }
@@ -217,16 +197,8 @@ img.pixel {
     font-size: 14px;
     color: white;
     opacity: 0;
-    
-    text-align: right;
-}
 
-.vertical-center {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    text-align: right;
 }
 
 .badge {
@@ -241,4 +213,12 @@ img.pixel {
     font-weight: bold;
 
     border-radius: 6px;
+}
+
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
