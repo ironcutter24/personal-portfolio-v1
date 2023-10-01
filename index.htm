@@ -12,6 +12,14 @@
     <custom-header>
     </custom-header>
 
+    <div id="overlay" style="width: 100%;">
+        <div class="vertical-center" style="width: 100%;">
+            <div style="width: 108px; margin: auto;">
+                <div id="load-ball" style="width: 8px; height: 8px; border-radius: 4px; background-color: white;"></div>
+            </div>
+        </div>
+    </div>
+
     <main>
         <section style="margin-top: 100px; margin-bottom: 40px; padding-left: 64px;">
             <div class="avatarGroup">
@@ -144,6 +152,29 @@
 </body>
 
 <script>
+
+    window.addEventListener("load", (event) => {
+        document.getElementById("overlay").hidden = true;
+    });
+
+    const timeScale = 60;
+    anime({
+        targets: '#load-ball',
+        translateX: [
+            { value: 100, duration: timeScale * 10, delay: timeScale * 5 },
+            { value: 0, duration: timeScale * 10, delay: timeScale * 5 }
+        ],
+        scaleX: [
+            { value: 4, duration: timeScale, delay: timeScale * 5, easing: 'easeOutExpo' },
+            { value: 1, duration: timeScale * 9 },
+            { value: 4, duration: timeScale, delay: timeScale * 5, easing: 'easeOutExpo' },
+            { value: 1, duration: timeScale * 9 }
+        ],
+        easing: 'easeOutElastic(1, .8)',
+        loop: true
+    });
+
+
     class ProjectCard extends HTMLElement {
         connectedCallback() {
             var title = this.getAttribute('title') || undefined;
