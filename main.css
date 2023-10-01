@@ -27,11 +27,11 @@ html {
 }
 
 body {
-    background-image: url("img/Vector_Seamless_Game_Controller_Pattern_Abstract_Background-02.jpg");
+    background-image: url("img/controller-tiled.png");
     background-repeat: repeat;
-    background-size: 25%;
+
     background-blend-mode: color-burn;
-    background-size: 1200px;
+    background-size: 16%;
     background-attachment: fixed;
 
     background-color: rgb(91, 68, 92);
