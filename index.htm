@@ -8,146 +8,143 @@
     <script src="common.js"></script>
 </head>
 
+<div id="overlay" style="width: 100%;">
+    <div class="vertical-center" style="width: 100%;">
+        <div style="width: 108px; margin: auto;">
+            <div id="load-ball" style="width: 8px; height: 8px; border-radius: 4px; background-color: white;"></div>
+        </div>
+    </div>
+</div>
+
 <body>
     <custom-header>
     </custom-header>
 
-    <div id="overlay" style="width: 100%;">
-        <div class="vertical-center" style="width: 100%;">
-            <div style="width: 108px; margin: auto;">
-                <div id="load-ball" style="width: 8px; height: 8px; border-radius: 4px; background-color: white;"></div>
+
+    <section style="margin-top: 100px; margin-bottom: 40px;">
+        <div class="avatarGroup">
+            <img class="avatar" src="img/avatar_cv_photo.JPG">
+            <img class="avatarOverlay" src="img/grunge_frame.png">
+            <div class="buttonGroup">
+                <a href="https://github.com/ironcutter24" target="_blank"><img class="iconButton"
+                        src="img/icons/github.png"></a>
+                <a href="https://www.linkedin.com/in/taglia24/" target="_blank"><img class="iconButton"
+                        src="img/icons/linkedin.png"></a>
+                <a href="https://ironcutter24.itch.io/" target="_blank"><img class="iconButton"
+                        src="img/icons/itch.png"></a>
             </div>
         </div>
-    </div>
 
-    <main>
-        <section style="margin-top: 100px; margin-bottom: 40px; padding-left: 64px;">
-            <div class="avatarGroup">
-                <img class="avatar" src="img/avatar_cv_photo.JPG">
-                <img class="avatarOverlay" src="img/grunge_frame.png">
-                <div class="buttonGroup">
-                    <a href="https://github.com/ironcutter24" target="_blank"><img class="iconButton"
-                            src="img/icons/github.png"></a>
-                    <a href="https://www.linkedin.com/in/taglia24/" target="_blank"><img class="iconButton"
-                            src="img/icons/linkedin.png"></a>
-                    <a href="https://ironcutter24.itch.io/" target="_blank"><img class="iconButton"
-                            src="img/icons/itch.png"></a>
-                </div>
-            </div>
-
-            <div id="bio">
-                <p class="pixel" style="font-size: 36px; color: white;">
-                    Hello world!
-                </p>
-                <p>
-                    I'm <b style="color: white"><i>Damiano Tagliaferri</i></b>,
-                    a passionate game developer who loves to design and develop games
-                    and interactive experiences.
-                </p>
-                <p>
-                    My main skills are game design and C# / C++ for Unity and Unreal.
-                </p>
-                <p>
-                    I like to explore and learn fields related to game development: game design, audio / sound design,
-                    2D art
-                </p>
-            </div>
-        </section>
-
-
-        <section id="about">
-            <h2>About me</h2>
-            <p class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                culpa qui officia deserunt mollit anim id est laborum.
+        <div id="bio">
+            <p class="pixel" style="font-size: 36px; color: white;">
+                Hello world!
             </p>
-        </section>
-
-
-        <section id="projects">
-            <h2>Projects</h2>
-            <div style="display: grid; grid-template-columns: auto auto auto;">
-
-                <div class="project">
-                    <project-card title="SkyGuard AR" src="skyguard.jpeg"
-                        href="https://ironcutter24.itch.io/arshooter"></project-card>
-                    <custom-badge text="unity" color="blue"></custom-badge>
-                    <custom-badge text="AR" color="darkred"></custom-badge>
-                </div>
-
-                <div class="project">
-                    <project-card title="Reminder of Sin" src="victorian.png"
-                        href="https://ironcutter24.itch.io/victorian-metroidvania"></project-card>
-                    <custom-badge text="new" color="red"></custom-badge>
-                    <custom-badge text="godot" color="rgb(69, 136, 185)"></custom-badge>
-                    <custom-badge text="2D" color="darkred"></custom-badge>
-                </div>
-
-                <div class="project">
-                    <project-card title="Blind Harvest" src="blind-harvest.png"
-                        href="https://ironcutter24.itch.io/1-bit-jam-2023"></project-card>
-                    <custom-badge text="new" color="red"></custom-badge>
-                    <custom-badge text="godot" color="rgb(69, 136, 185)"></custom-badge>
-                    <custom-badge text="aseprite" color="rgb(113, 98, 109)"></custom-badge>
-                    <custom-badge text="2D" color="darkred"></custom-badge>
-                    <custom-badge text="7d-jam" color="green"></custom-badge>
-                </div>
-
-                <div class="project">
-                    <project-card title="Afterimage" src="afterimage.png"
-                        href="https://ironcutter24.itch.io/afterimage"></project-card>
-                    <custom-badge text="unity" color="blue"></custom-badge>
-                    <custom-badge text="2D" color="darkred"></custom-badge>
-                    <custom-badge text="10d-jam" color="green"></custom-badge>
-                </div>
-
-                <div class="project">
-                    <project-card title="Unwanted Postman" src="postman.png"
-                        href="https://ironcutter24.itch.io/unwanted-postman"></project-card>
-                    <custom-badge text="unity" color="blue"></custom-badge>
-                    <custom-badge text="blender" color="rgb(235, 122, 8)"></custom-badge>
-                    <custom-badge text="3D" color="darkred"></custom-badge>
-                    <custom-badge text="72h-jam" color="green"></custom-badge>
-                </div>
-
-                <div class="project">
-                    <project-card title="Undergroove" src="undergroove.png"
-                        href="https://ironcutter24.itch.io/undergroove"></project-card>
-                    <custom-badge text="unity" color="blue"></custom-badge>
-                    <custom-badge text="2.5D" color="darkred"></custom-badge>
-                    <custom-badge text="10d-jam" color="green"></custom-badge>
-                </div>
-
-                <div class="project">
-                    <project-card title="10 Seconds Ambush" src="ten-sec-ambush.png"
-                        href="https://ironcutter24.itch.io/10-seconds-ambush"></project-card>
-                    <custom-badge text="unity" color="blue"></custom-badge>
-                    <custom-badge text="2D" color="darkred"></custom-badge>
-                    <custom-badge text="72h-jam" color="green"></custom-badge>
-                </div>
-
-                <div class="project">
-                    <project-card title="Neden" src="neden.jpg"
-                        href="https://ironcutter24.itch.io/neden"></project-card>
-                    <custom-badge text="unity" color="blue"></custom-badge>
-                    <custom-badge text="3D" color="darkred"></custom-badge>
-                    <custom-badge text="10d-jam" color="green"></custom-badge>
-                </div>
-            </div>
-        </section>
-
-
-        <section id="contacts">
-            <h2>Contacts</h2>
-            <p class="content">
-                Contact information
+            <p>
+                I'm <b style="color: white"><i>Damiano Tagliaferri</i></b>,
+                a passionate game developer who loves to design and develop games
+                and interactive experiences.
             </p>
-        </section>
+            <p>
+                My main skills are game design and C# / C++ for Unity and Unreal.
+            </p>
+            <p>
+                I like to explore and learn fields related to game development: game design, audio / sound design,
+                2D art
+            </p>
+        </div>
+    </section>
 
-    </main>
+
+    <section id="about">
+        <h2>About me</h2>
+        <p class="content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </section>
+
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div id="project-grid">
+
+            <div class="project">
+                <project-card title="SkyGuard AR" src="skyguard.jpeg"
+                    href="https://ironcutter24.itch.io/arshooter"></project-card>
+                <custom-badge text="unity" color="blue"></custom-badge>
+                <custom-badge text="AR" color="darkred"></custom-badge>
+            </div>
+
+            <div class="project">
+                <project-card title="Reminder of Sin" src="victorian.png"
+                    href="https://ironcutter24.itch.io/victorian-metroidvania"></project-card>
+                <custom-badge text="new" color="red"></custom-badge>
+                <custom-badge text="godot" color="rgb(69, 136, 185)"></custom-badge>
+                <custom-badge text="2D" color="darkred"></custom-badge>
+            </div>
+
+            <div class="project">
+                <project-card title="Blind Harvest" src="blind-harvest.png"
+                    href="https://ironcutter24.itch.io/1-bit-jam-2023"></project-card>
+                <custom-badge text="new" color="red"></custom-badge>
+                <custom-badge text="godot" color="rgb(69, 136, 185)"></custom-badge>
+                <custom-badge text="aseprite" color="rgb(113, 98, 109)"></custom-badge>
+                <custom-badge text="2D" color="darkred"></custom-badge>
+                <custom-badge text="7d-jam" color="green"></custom-badge>
+            </div>
+
+            <div class="project">
+                <project-card title="Afterimage" src="afterimage.png"
+                    href="https://ironcutter24.itch.io/afterimage"></project-card>
+                <custom-badge text="unity" color="blue"></custom-badge>
+                <custom-badge text="2D" color="darkred"></custom-badge>
+                <custom-badge text="10d-jam" color="green"></custom-badge>
+            </div>
+
+            <div class="project">
+                <project-card title="Unwanted Postman" src="postman.png"
+                    href="https://ironcutter24.itch.io/unwanted-postman"></project-card>
+                <custom-badge text="unity" color="blue"></custom-badge>
+                <custom-badge text="blender" color="rgb(235, 122, 8)"></custom-badge>
+                <custom-badge text="3D" color="darkred"></custom-badge>
+                <custom-badge text="72h-jam" color="green"></custom-badge>
+            </div>
+
+            <div class="project">
+                <project-card title="Undergroove" src="undergroove.png"
+                    href="https://ironcutter24.itch.io/undergroove"></project-card>
+                <custom-badge text="unity" color="blue"></custom-badge>
+                <custom-badge text="2.5D" color="darkred"></custom-badge>
+                <custom-badge text="10d-jam" color="green"></custom-badge>
+            </div>
+
+            <div class="project">
+                <project-card title="10 Seconds Ambush" src="ten-sec-ambush.png"
+                    href="https://ironcutter24.itch.io/10-seconds-ambush"></project-card>
+                <custom-badge text="unity" color="blue"></custom-badge>
+                <custom-badge text="2D" color="darkred"></custom-badge>
+                <custom-badge text="72h-jam" color="green"></custom-badge>
+            </div>
+
+            <div class="project">
+                <project-card title="Neden" src="neden.jpg" href="https://ironcutter24.itch.io/neden"></project-card>
+                <custom-badge text="unity" color="blue"></custom-badge>
+                <custom-badge text="3D" color="darkred"></custom-badge>
+                <custom-badge text="10d-jam" color="green"></custom-badge>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contacts">
+        <h2>Contacts</h2>
+        <p class="content">
+            Contact information
+        </p>
+    </section>
 
 </body>
 
