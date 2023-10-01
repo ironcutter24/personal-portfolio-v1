@@ -225,7 +225,7 @@ p.pixel {
     transform: translateY(-50%);
 }
 
-@media (pointer:none) and (pointer:coarse) and (max-width: 768px) {
+@media (max-width: 768px) {
     .avatarGroup {
         margin-left: auto;
         margin-right: auto;
