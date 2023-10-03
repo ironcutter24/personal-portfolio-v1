@@ -166,8 +166,9 @@ p.pixel {
 }
 
 #project-grid {
-    display: grid;
-    grid-template-columns: auto auto auto;
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .project {
