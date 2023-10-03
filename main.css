@@ -74,6 +74,15 @@ h2 {
     text-align: center;
 }
 
+hr {
+    width: 40%;
+    color: white;
+}
+
+ul {
+    list-style-image: url("img/GUI/fast-forward.png");
+}
+
 #bio {
     width: 400px;
     margin-left: 4px;

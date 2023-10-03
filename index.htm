@@ -59,6 +59,7 @@
 
     <section id="about">
         <h2>About me</h2>
+        <hr>
         <p class="content">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
             et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -71,6 +72,7 @@
 
     <section id="projects" class="anchor">
         <h2>Projects</h2>
+        <hr>
         <div id="project-grid">
 
             <div class="project">
@@ -78,6 +80,8 @@
                     href="https://ironcutter24.itch.io/arshooter"></project-card>
                 <custom-badge text="unity" color="blue"></custom-badge>
                 <custom-badge text="AR" color="darkred"></custom-badge>
+
+                <project-details head="" list="Play Games integration;Online saves;Online leaderboard"></project-details>
             </div>
 
             <div class="project">
@@ -87,6 +91,13 @@
                 <custom-badge text="godot" color="rgb(69, 136, 185)"></custom-badge>
                 <custom-badge text="2D" color="darkred"></custom-badge>
             </div>
+        </div>
+    </section>
+
+    <section style="margin-top: -20px;">
+        <h2>Game Jams</h2>
+        <hr>
+        <div id="project-grid">
 
             <div class="project">
                 <project-card title="Blind Harvest" src="blind-harvest.png"
@@ -96,6 +107,8 @@
                 <custom-badge text="aseprite" color="rgb(113, 98, 109)"></custom-badge>
                 <custom-badge text="2D" color="darkred"></custom-badge>
                 <custom-badge text="7d-jam" color="green"></custom-badge>
+
+                <project-details head="" list="Made everything except engine from scratch"></project-details>
             </div>
 
             <div class="project">
@@ -113,6 +126,8 @@
                 <custom-badge text="blender" color="rgb(235, 122, 8)"></custom-badge>
                 <custom-badge text="3D" color="darkred"></custom-badge>
                 <custom-badge text="72h-jam" color="green"></custom-badge>
+
+                <project-details head="Header" list="item;item 2;other stuff"></project-details>
             </div>
 
             <div class="project">
@@ -143,6 +158,7 @@
 
     <section id="contacts" class="anchor">
         <h2>Contacts</h2>
+        <hr>
         <p class="content">
             Contact information
         </p>
@@ -192,6 +208,7 @@
         }
         customElements.define("project-card", ProjectCard);
 
+
         class Badge extends HTMLElement {
             connectedCallback() {
                 var text = this.getAttribute('text') || undefined;
@@ -203,6 +220,26 @@
             }
         }
         customElements.define("custom-badge", Badge);
+
+
+        class ProjectDetails extends HTMLElement {
+            connectedCallback() {
+                var head = this.getAttribute('head') || undefined;
+                var listContents = (this.getAttribute('list') || undefined).split(";");
+
+                var listHtml = "";
+                listContents.forEach(item => listHtml += "<li>" + item + "</li>");
+
+                this.innerHTML = `
+                    <div>
+                        <!--p>${head}</p-->
+                        <ul>${listHtml}</ul> 
+                    </div>
+                `;
+            }
+        }
+        customElements.define("project-details", ProjectDetails);
+
 
 
         /***** ANIMATIONS *****/
