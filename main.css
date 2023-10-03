@@ -80,6 +80,10 @@ h2 {
     display: inline-block;
 }
 
+.anchor {
+    scroll-margin-top: 80px;
+}
+
 section {
     width: 100%;
     margin-top: 60px;
@@ -224,6 +228,7 @@ p.pixel {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
+
 
 @media (max-width: 768px) {
     .avatarGroup {
