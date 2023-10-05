@@ -219,6 +219,10 @@ p.pixel {
     text-align: right;
 }
 
+ul.cardDetails {
+    width: 208px;
+}
+
 .badge {
     color: white;
     padding: 2px 6px;
