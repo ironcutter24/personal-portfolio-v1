@@ -252,7 +252,7 @@
 
 
 
-        /***** ANIMATIONS *****/
+        // CARD CONTAINERS ANIMATIONS
         const cards = document.querySelectorAll('.cardContainer');
 
         cards.forEach(card => {
@@ -286,7 +286,25 @@
         });
 
 
+        
+        // BUTTON ICONS ANIMATIONS
+        const iconButtons = document.querySelectorAll('.iconButton');
 
+        iconButtons.forEach(icon => {
+            icon.addEventListener('mouseover', function handleHover(event) {
+                tweenOpacity(icon, .5, 120);
+            });
+        });
+
+        iconButtons.forEach(icon => {
+            icon.addEventListener('mouseout', function handleHover(event) {
+                tweenOpacity(icon, 1, 120);
+            });
+        });
+
+
+
+        // ANIMATION HELPERS
         function tweenOpacity(obj, to, time, ease = 'linear') {
             anime.remove(obj);
             anime({
