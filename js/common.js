@@ -24,7 +24,7 @@ class Header extends HTMLElement {
                 <div class="vertical-center" style="right: 120px;">
                     <a href="#top" class="headerElement">About Me</a>
                     <a href="#projects" class="headerElement">Projects</a> 
-                    <a href="#contacts" class="headerElement">Contacts</a>
+                    <a href="#gamejams" class="headerElement">Game Jams</a>
                 </div>
             </div>
         `;
