@@ -4,17 +4,17 @@
 }
 
 html {
+    scroll-behavior: smooth;
+
     background-image: url("img/controller-tiled.png");
     background-repeat: repeat;
     background-blend-mode: color-burn;
     background-size: 16%;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-color: rgb(91, 68, 92);
-
-    scroll-behavior: smooth;
 }
 
-#overlay {
+#loading-overlay {
     background-color: rgb(8, 8, 8);
 
     position: fixed;
@@ -25,6 +25,11 @@ html {
 
     z-index: 100;
 }
+
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+  }
 
 #header {
     position: fixed;

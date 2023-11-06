@@ -1,30 +1,21 @@
-// HIDE LOADING SCREEN ON LOAD
-window.addEventListener("load", (event) => {
-    document.getElementById("overlay").hidden = true;
-});
-
-
-// LOADING SCREEN ANIMATION
-const timeScale = 60;
-anime({
-    targets: '#load-ball',
-    translateX: [
-        { value: 100, duration: timeScale * 10, delay: timeScale * 5 },
-        { value: 0, duration: timeScale * 10, delay: timeScale * 5 }
-    ],
-    scaleX: [
-        { value: 4, duration: timeScale, delay: timeScale * 5, easing: 'easeOutExpo' },
-        { value: 1, duration: timeScale * 9 },
-        { value: 4, duration: timeScale, delay: timeScale * 5, easing: 'easeOutExpo' },
-        { value: 1, duration: timeScale * 9 }
-    ],
-    easing: 'easeOutElastic(1, .8)',
-    loop: true
-});
-
-
-
 // GENERATE CUSTOM ELEMENTS
+class LoadingOverlay extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+            <div id="loading-overlay">
+                <div class="vertical-center" style="width: 100%;">
+                    <div style="width: 108px; margin: auto;">
+                        <div id="load-ball" style="width: 8px; height: 8px; border-radius: 4px; background-color: white;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+}
+customElements.define("loading-overlay", LoadingOverlay);
+
+
 class ProjectCard extends HTMLElement {
     connectedCallback() {
         var title = this.getAttribute('title') || undefined;
@@ -149,4 +140,46 @@ function tweenScale(obj, to, time, ease = 'linear') {
         duration: time,
         easing: ease,
     });
+}
+
+
+// HIDE LOADING SCREEN ON LOAD
+window.addEventListener("load", (event) => {
+    document.getElementById("body").classList.remove("stop-scrolling");
+    document.getElementById("loading-overlay").hidden = true;
+});
+
+
+// LOADING SCREEN ANIMATION
+const timeScale = 60;
+anime({
+    targets: '#load-ball',
+    translateX: [
+        { value: 100, duration: timeScale * 10, delay: timeScale * 5 },
+        { value: 0, duration: timeScale * 10, delay: timeScale * 5 }
+    ],
+    scaleX: [
+        { value: 4, duration: timeScale, delay: timeScale * 5, easing: 'easeOutExpo' },
+        { value: 1, duration: timeScale * 9 },
+        { value: 4, duration: timeScale, delay: timeScale * 5, easing: 'easeOutExpo' },
+        { value: 1, duration: timeScale * 9 }
+    ],
+    easing: 'easeOutElastic(1, .8)',
+    loop: true
+});
+
+
+// BG PARALLAX SCROLL
+// https://stackoverflow.com/questions/29240028/css-make-a-background-image-scroll-slower-than-everything-else
+document.getElementById("body").onscroll = function myFunction() {
+    var target = document.getElementById("html");
+    
+    var scrolltotop = document.scrollingElement.scrollTop;
+    var factor = 0.5;
+    var yvalue = scrolltotop * factor;
+    
+    var xvalue = "center";
+    //target.style.backgroundPosition = xvalue + " " + yvalue + "px";
+
+    target.style.backgroundPositionY = yvalue + "px";
 }
