@@ -21,7 +21,7 @@ customElements.define("head-content", Head);
 class Header extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-            <div id="header" class="topnav">
+            <div id="myTopnav" class="topnav">
                 <a href="#top">About Me</a>
                 <a href="#projects">Projects</a> 
                 <a href="#gamejams">Game Jams</a>
@@ -36,7 +36,7 @@ customElements.define("custom-header", Header);
 
 
 function toggleResponsiveHeader() {
-    var x = document.getElementById("header");
+    var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
         x.className += " responsive";
     } else {
@@ -45,11 +45,11 @@ function toggleResponsiveHeader() {
 }
 
 function showTopnavDropdown() {
-    var x = document.getElementById("header");
+    var x = document.getElementById("myTopnav");
     x.className = "topnav responsive";
 }
 
 function hideTopnavDropdown() {
-    var x = document.getElementById("header");
+    var x = document.getElementById("myTopnav");
     x.className = "topnav";
 }
