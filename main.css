@@ -14,48 +14,16 @@ html {
     background-color: rgb(91, 68, 92);
 }
 
-#loading-overlay {
-    background-color: rgb(8, 8, 8);
-
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
-    z-index: 100;
-}
-
-.stop-scrolling {
-    height: 100%;
-    overflow: hidden;
-  }
-
-#header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-
-    height: 60px;
-
-    background-color: rgb(8, 8, 8);
-
-    z-index: 10;
-}
-
-.headerElement {
-    margin-left: 20px;
-    font-size: 14px;
-    font-family: "pixel_rpg";
-}
-
 body {
+    margin: 0;
     font-family: Times, serif;
+
     font-size: 18px;
     line-height: 24px;
     color: rgb(204, 204, 204);
+}
 
+main {
     width: 820px;
     margin-top: 0;
     margin-left: auto;
@@ -88,10 +56,29 @@ ul {
     list-style-image: url("img/GUI/fast-forward.png");
 }
 
-#bio {
-    width: 400px;
-    margin-left: 4px;
-    display: inline-block;
+#loading-overlay {
+    background-color: rgb(8, 8, 8);
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 100;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 50px;
+
+    background-color: rgb(8, 8, 8);
+
+    z-index: 10;
 }
 
 .anchor {
@@ -109,58 +96,6 @@ p.pixel {
     font-family: "pixel_rpg";
 }
 
-.avatarGroup {
-    position: relative;
-    width: 220px;
-    display: inline-block;
-    vertical-align: top;
-    margin-top: 34px;
-
-    margin-left: 64px;
-}
-
-.avatar {
-    height: 200px;
-    width: 200px;
-    border-radius: 100px;
-
-    display: block;
-}
-
-.avatarOverlay {
-    height: 240px;
-    width: 234px;
-
-    position: absolute;
-    top: -18px;
-    left: -18px;
-
-    overflow: visible;
-    z-index: 2;
-}
-
-.iconButton {
-    border: none;
-    padding: 6px 6px;
-    margin-top: 6px;
-
-    height: 32px;
-    width: 32px;
-
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-
-    filter: hue-rotate();
-}
-
-.buttonGroup {
-    margin-top: 6px;
-    display: flex;
-    justify-content: center;
-}
-
 .content {
     width: 100%;
 
@@ -170,74 +105,9 @@ p.pixel {
     display: block;
 }
 
-#project-grid {
-    display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.project {
-    margin-left: 4px;
-    margin-right: 4px;
-    margin-bottom: 24px;
-    display: inline-block;
-}
-
-.cardContainer {
-    position: relative;
-    overflow: hidden;
-
-    border-style: solid;
-    border-width: 2px;
-    border-color: rgb(204, 204, 204);
-    border-radius: 10px;
-
-    height: 260px;
-    width: 260px;
-}
-
-.cardImage {
+.stop-scrolling {
     height: 100%;
-}
-
-.cardBand {
-    position: absolute;
-    bottom: -20px;
-
-    height: 28px;
-    width: 100%;
-
-    opacity: 0;
-}
-
-.cardTitle {
-    position: absolute;
-    left: -8px;
-    bottom: -12px;
-
-    width: 100%;
-    font-family: "pixel_rpg";
-    font-size: 14px;
-    color: white;
-    opacity: 0;
-
-    text-align: right;
-}
-
-ul.cardDetails {
-    width: 208px;
-}
-
-.badge {
-    color: white;
-    padding: 2px 6px;
-    text-align: center;
-
-    font-family: sans-serif;
-    font-size: small;
-    font-weight: bold;
-
-    border-radius: 6px;
+    overflow: hidden;
 }
 
 .vertical-center {
@@ -249,19 +119,13 @@ ul.cardDetails {
 }
 
 
-@media (max-width: 768px) {
-    .avatarGroup {
-        margin-left: auto;
-        margin-right: auto;
+@media (max-width: 1200px) {
+    html {
+        background-image: none;
+        background-color: black;
     }
 
-    #bio {
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    body {
+    main {
         width: auto;
 
         padding-left: 20px;
@@ -270,14 +134,72 @@ ul.cardDetails {
         margin: 0;
         border-radius: 0;
     }
+}
 
-    #project-grid {
-        display: grid;
-        grid-template-columns: auto;
+
+
+
+
+.topnav {
+    overflow: hidden;
+    padding-right: 120px;
+    background-color: #333;
+}
+
+.topnav a {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: "pixel_rpg";
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav {
+        padding-right: 0;
+    }
+    
+    .topnav a {
+        display: none;
     }
 
-    .project {
-        margin-left: auto;
-        margin-right: auto;
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
     }
 }

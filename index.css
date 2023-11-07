@@ -1,0 +1,150 @@
+#bio {
+    width: 400px;
+    margin-left: 4px;
+    display: inline-block;
+}
+
+.avatarGroup {
+    position: relative;
+    width: 220px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 34px;
+
+    margin-left: 64px;
+}
+
+.avatar {
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+
+    display: block;
+}
+
+.avatarOverlay {
+    height: 240px;
+    width: 234px;
+
+    position: absolute;
+    top: -18px;
+    left: -18px;
+
+    overflow: visible;
+    z-index: 2;
+}
+
+.iconButton {
+    border: none;
+    padding: 6px 6px;
+    margin-top: 6px;
+
+    height: 32px;
+    width: 32px;
+
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+    filter: hue-rotate();
+}
+
+.buttonGroup {
+    margin-top: 6px;
+    display: flex;
+    justify-content: center;
+}
+
+#project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project {
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: 24px;
+    display: inline-block;
+}
+
+.cardContainer {
+    position: relative;
+    overflow: hidden;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(204, 204, 204);
+    border-radius: 10px;
+
+    height: 260px;
+    width: 260px;
+}
+
+.cardImage {
+    height: 100%;
+}
+
+.cardBand {
+    position: absolute;
+    bottom: -20px;
+
+    height: 28px;
+    width: 100%;
+
+    opacity: 0;
+}
+
+.cardTitle {
+    position: absolute;
+    left: -8px;
+    bottom: -12px;
+
+    width: 100%;
+    font-family: "pixel_rpg";
+    font-size: 14px;
+    color: white;
+    opacity: 0;
+
+    text-align: right;
+}
+
+ul.cardDetails {
+    width: 208px;
+}
+
+.badge {
+    color: white;
+    padding: 2px 6px;
+    text-align: center;
+
+    font-family: sans-serif;
+    font-size: small;
+    font-weight: bold;
+
+    border-radius: 6px;
+}
+
+@media (max-width: 1200px) {
+    .avatarGroup {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #bio {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #project-grid {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .project {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

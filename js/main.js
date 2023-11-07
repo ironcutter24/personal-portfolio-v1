@@ -146,6 +146,7 @@ function tweenScale(obj, to, time, ease = 'linear') {
 // HIDE LOADING SCREEN ON LOAD
 window.addEventListener("load", (event) => {
     document.getElementById("body").classList.remove("stop-scrolling");
+    document.body.style.display = "block";
     document.getElementById("loading-overlay").hidden = true;
 });
 
