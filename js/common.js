@@ -42,4 +42,14 @@ function toggleResponsiveHeader() {
     } else {
         x.className = "topnav";
     }
-  }
+}
+
+function showTopnavDropdown() {
+    var x = document.getElementById("header");
+    x.className = "topnav responsive";
+}
+
+function hideTopnavDropdown() {
+    var x = document.getElementById("header");
+    x.className = "topnav";
+}
