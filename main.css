@@ -157,9 +157,11 @@ p.pixel {
     font-size: 17px;
 }
 
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
+@media (hover: hover) {
+    .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
 }
 
 .topnav .icon {
@@ -178,12 +180,6 @@ p.pixel {
     .topnav a.icon {
         float: right;
         display: block;
-    }
-
-    .topnav a:hover,
-    .topnav a:active {
-        background-color: #ddd;
-        color: black;
     }
 }
 
