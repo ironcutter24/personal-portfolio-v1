@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html id="html">
+
+<head>
+    <head-content></head-content>
+    <link rel="stylesheet" href="index.css">
+
+    <script src="js/libs/anime.min.js"></script>
+    <script src="js/common.js"></script>
+</head>
+
+<loading-overlay></loading-overlay>
+
+<body id="body" class="stop-scrolling" style="display: none;">
+
+    <custom-header></custom-header>
+
+    <main style="padding-top: 10px;" onclick="hideTopnavDropdown()" ontouchend="hideTopnavDropdown()">
+
+        <section style="margin-bottom: 40px;">
+            <div class="avatarGroup">
+                <img class="avatar" src="img/avatar_cv_photo.JPG">
+                <img class="avatarOverlay" src="img/grunge_frame.png">
+                <div class="buttonGroup">
+                    <a href="https://github.com/ironcutter24" target="_blank"><img class="iconButton"
+                            src="img/icons/github.png"></a>
+                    <a href="https://www.linkedin.com/in/taglia24/" target="_blank"><img class="iconButton"
+                            src="img/icons/linkedin.png"></a>
+                    <a href="https://ironcutter24.itch.io/" target="_blank"><img class="iconButton"
+                            src="img/icons/itch.png"></a>
+                </div>
+            </div>
+
+            <div id="bio">
+                <p class="pixel" style="font-size: 36px; color: white;">
+                    Hello world!
+                </p>
+                <p>
+                    I'm <b style="color: white"><i>Damiano Tagliaferri</i></b>,
+                    a passionate game developer who loves to design and develop games
+                    and interactive experiences.
+                </p>
+                <p>
+                    My main skills are game design and C# / C++ for Unity and Unreal.
+                </p>
+                <p>
+                    I'm confident working on multiplayer and XR games, targeting PC and mobile.
+                    <br><br>
+                    <ul>
+                        <li>
+                            <i>Full resume <a href="docs/CV_GameDev_DamianoTagliaferri.pdf" target="_blank"
+                                    download>here</a></i>
+                        </li>
+                    </ul>
+                </p>
+            </div>
+        </section>
+
+
+        <section id="about">
+            <h2>About me</h2>
+            <hr>
+            <p class="content">
+                Hailing from Rome and now based in Biella, Italy,
+                I'm a versatile game developer with a passion for
+                merging technical expertise and artistic creativity
+                to craft immersive games.
+                <br>
+                <!--br>
+                My journey in the world of game development began at
+                a social media startup, where I honed my craft as a
+                Unity developer. Although the experience was enriching,
+                my true ambition lies in creating immersive and
+                captivating games.
+                <br-->
+                My skills extend across game design, music production,
+                sound design, 3D modeling, animation, and more, fostering
+                seamless collaboration within development teams.
+                <br>
+                I possess an insatiable curiosity, always eager to explore
+                new horizons in the gaming industry.
+                <br><br>
+                When I'm not immersed in code, you'll find me strumming a
+                guitar, playing bass or experimenting with music production.
+                This musical background seeps into my creations, inspiring
+                dynamic soundscapes and interactive audio implementations.
+                <br>
+                I can talk about game design all night long, and my ultimate
+                goal is to join great studios where I can bring innovative
+                PC games to life.
+            </p>
+        </section>
+
+
+        <section id="projects" class="anchor">
+            <h2>Projects</h2>
+            <hr>
+            <div id="project-grid">
+
+                <div class="project">
+                    <project-card title="[Unreleased project]" src="" href=""></project-card>
+                    <custom-badge text="new" color="red"></custom-badge>
+                    <custom-badge text="unity" color="blue"></custom-badge>
+                    <custom-badge text="3D" color="darkred"></custom-badge>
+                    <custom-badge text="mobile" color="darkred"></custom-badge>
+                    <custom-badge text="PoC" color="green"></custom-badge>
+
+                    <project-details head=""
+                        list="Helped company raise 300,000$ investment;Online multiplayer;Tile based procgen;Flutter integration;Weather system that mimics real weather"></project-details>
+                </div>
+
+                <!--div class="project">
+                    <project-card title="[Unreleased project]" src=""
+                        href=""></project-card>
+                    <custom-badge text="unity" color="blue"></custom-badge>
+                    <custom-badge text="3D" color="darkred"></custom-badge>
+                    <custom-badge text="PoC" color="green"></custom-badge>
+
+                    <project-details head="" list="Unique hack & slash combat system;Custom UniTask FSM;Enemy AI programming"></project-details>
+                </div-->
+
+                <div class="project">
+                    <project-card title="Reminder of Sin" src="victorian.png"
+                        href="https://ironcutter24.itch.io/victorian-metroidvania"></project-card>
+                    <custom-badge text="new" color="red"></custom-badge>
+                    <custom-badge text="godot" color="rgb(69, 136, 185)"></custom-badge>
+                    <custom-badge text="2D" color="darkred"></custom-badge>
+
+                    <project-details head=""
+                        list="Metroidvania traversal mechanics;Complex boss AI;Camera transitions system"></project-details>
+                </div>
+
+                <div class="project">
+                    <project-card title="SkyGuard AR" src="skyguard.jpeg"
+                        href="https://ironcutter24.itch.io/arshooter"></project-card>
+                    <custom-badge text="unity" color="blue"></custom-badge>
+                    <custom-badge text="AR" color="darkred"></custom-badge>
+                    <custom-badge text="mobile" color="darkred"></custom-badge>
+
+                    <project-details head=""
+                        list="Play Games integration;Online saves & leaderboards;Resizable game world;Text localization"></project-details>
+                </div>
+            </div>
+        </section>
+
+        <section id="gamejams" class="anchor" style="margin-top: -20px;">
+            <h2>Game Jams</h2>
+            <hr>
+            <div id="project-grid">
+
+                <div class="project">
+                    <project-card title="Blind Harvest" src="blind-harvest.png"
+                        href="https://ironcutter24.itch.io/1-bit-jam-2023"></project-card>
+                    <custom-badge text="new" color="red"></custom-badge>
+                    <custom-badge text="godot" color="rgb(69, 136, 185)"></custom-badge>
+                    <custom-badge text="2D" color="darkred"></custom-badge>
+                    <custom-badge text="7d-jam" color="green"></custom-badge>
+                    <custom-badge text="aseprite" color="rgb(113, 98, 109)"></custom-badge>
+
+                    <project-details head=""
+                        list="Made everything except engine from scratch (Design, code, graphics, animation, music, sounds...)"></project-details>
+                </div>
+
+                <div class="project">
+                    <project-card title="Afterimage" src="afterimage.png"
+                        href="https://ironcutter24.itch.io/afterimage"></project-card>
+                    <custom-badge text="unity" color="blue"></custom-badge>
+                    <custom-badge text="2D" color="darkred"></custom-badge>
+                    <custom-badge text="10d-jam" color="green"></custom-badge>
+
+                    <project-details head=""
+                        list="52th place for best mechanics;Roles: designer, developer and level designer help;Managed a team of 4 people"></project-details>
+                </div>
+
+                <div class="project">
+                    <project-card title="Unwanted Postman" src="postman.png"
+                        href="https://ironcutter24.itch.io/unwanted-postman"></project-card>
+                    <custom-badge text="unity" color="blue"></custom-badge>
+                    <custom-badge text="3D" color="darkred"></custom-badge>
+                    <custom-badge text="72h-jam" color="green"></custom-badge>
+                    <custom-badge text="blender" color="rgb(235, 122, 8)"></custom-badge>
+
+                    <project-details head=""
+                        list="55th most fun game in LD53;Roles: designer, developer, 3D artist;Online leaderboard (PlayFab)"></project-details>
+                </div>
+
+                <div class="project">
+                    <project-card title="Undergroove" src="undergroove.png"
+                        href="https://ironcutter24.itch.io/undergroove"></project-card>
+                    <custom-badge text="unity" color="blue"></custom-badge>
+                    <custom-badge text="2.5D" color="darkred"></custom-badge>
+                    <custom-badge text="10d-jam" color="green"></custom-badge>
+
+                    <project-details head=""
+                        list="Roles: designer, lead developer;Rhythm game mechanic;3D tiles editor tools;Audio programming;Managed a team of 12 people"></project-details>
+                </div>
+
+                <div class="project">
+                    <project-card title="10 Seconds Ambush" src="ten-sec-ambush.png"
+                        href="https://ironcutter24.itch.io/10-seconds-ambush"></project-card>
+                    <custom-badge text="unity" color="blue"></custom-badge>
+                    <custom-badge text="2D" color="darkred"></custom-badge>
+                    <custom-badge text="72h-jam" color="green"></custom-badge>
+
+                    <project-details head=""
+                        list="Made by myself in 72h;Dialogue system integrated with character animations"></project-details>
+                </div>
+
+                <div class="project">
+                    <project-card title="Neden" src="neden.jpg"
+                        href="https://ironcutter24.itch.io/neden"></project-card>
+                    <custom-badge text="unity" color="blue"></custom-badge>
+                    <custom-badge text="3D" color="darkred"></custom-badge>
+                    <custom-badge text="10d-jam" color="green"></custom-badge>
+
+                    <project-details head=""
+                        list="Gameplay programming;Enemy AI (FSM);Object pooling system;Audio programming"></project-details>
+                </div>
+            </div>
+        </section>
+
+        <section style="height: 60px;">
+            <hr>
+            <p style="text-align: center;"">
+            © 2023 Damiano Tagliaferri
+            </p>
+        </section>
+
+    </main>
+
+    <script src=" js/main.js">
+    </script>
+
+</body>
+
+</html>
