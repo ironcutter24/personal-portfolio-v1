@@ -129,58 +129,58 @@ custom-header {
 .topnav {
     float: right;
     padding-right: 120px;
-}
 
-.topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-family: "pixel_rpg";
-    font-size: 17px;
-}
+    > a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-family: "pixel_rpg";
+        font-size: 17px;
+    }
 
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
-}
+    > a:hover {
+        background-color: #ddd;
+        color: black;
+    }
 
-.topnav .icon {
-    display: none;
+    > .icon {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 600px) {
     .topnav {
         padding-right: 0;
-    }
 
-    .topnav a {
-        display: none;
-    }
+        > a {
+            display: none;
+        }
 
-    .topnav a.icon {
-        float: right;
+        > a.icon {
+            float: right;
         display: block;
+        }
     }
 }
 
 @media screen and (max-width: 600px) {
     .topnav.responsive {
         position: relative;
-    }
 
-    .topnav.responsive .icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
+        > a {
+            float: right;
+            display: block;
+            text-align: right;
+        }
 
-    .topnav.responsive a {
-        float: right;
-        display: block;
-        text-align: right;
+        > .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
     }
 }
 
